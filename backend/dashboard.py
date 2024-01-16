@@ -8,7 +8,7 @@ class Dashboard:
         self.setup_routes()
 
     def setup_routes(self):
-        @self.app.route('/api/staff_count_by_school', methods=['GET'])
+        @self.app.route('/dashboard/staff_count_by_school', methods=['GET'])
         def staff_count_by_school():
             query = """
                 SELECT S.name_eng, COUNT(L.id) as count
@@ -20,7 +20,7 @@ class Dashboard:
             count_by_school = {item['name_eng']: item['count'] for item in result}
             return jsonify(count_by_school)
 
-        @self.app.route('/api/staff_position_breakdown', methods=['GET'])
+        @self.app.route('/dashboard/staff_position_breakdown', methods=['GET'])
         def staff_position_breakdown():
             query = """
                 SELECT actual_position, COUNT(*) as count 
@@ -31,7 +31,7 @@ class Dashboard:
             position_breakdown = {item['actual_position']: item['count'] for item in result}
             return jsonify(position_breakdown)
 
-        @self.app.route('/api/joining_dates_timeline', methods=['GET'])
+        @self.app.route('/dashboard/joining_dates_timeline', methods=['GET'])
         def joining_dates_timeline():
             query = """
                 SELECT DATE(entering_uum_date) as date, COUNT(*) as count 
@@ -42,7 +42,7 @@ class Dashboard:
             timeline = {item['date']: item['count'] for item in result}
             return jsonify(timeline)
 
-        @self.app.route('/api/staff_join_per_year', methods=['GET'])
+        @self.app.route('/dashboard/staff_join_per_year', methods=['GET'])
         def staff_join_per_year():
             query = """
                 SELECT YEAR(entering_uum_date) as year, COUNT(*) as count 
