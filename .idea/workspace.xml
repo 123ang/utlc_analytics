@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="984a9e5e-638b-4691-bfff-0057f8e07190" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/email_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/import_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataset/staff_info.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/dashboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
