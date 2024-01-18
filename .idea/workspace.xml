@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="984a9e5e-638b-4691-bfff-0057f8e07190" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/next.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +48,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Desktop\Website\utlc_analytics" />
       <recent name="C:\Users\ASUS\Desktop\Website\utlc_analytics\backend" />
       <recent name="C:\Users\ASUS\Desktop\Website\utlc_analytics\dataset" />
-      <recent name="C:\Users\ASUS\Desktop\Website\utlc_analytics" />
     </key>
   </component>
   <component name="SharedIndexes">
