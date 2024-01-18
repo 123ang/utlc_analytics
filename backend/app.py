@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
 import mysql.connector
 from user import User
+from dashboard import Dashboard
+
 
 app = Flask(__name__)
+
 
 def get_db_connection():
     return mysql.connector.connect(
