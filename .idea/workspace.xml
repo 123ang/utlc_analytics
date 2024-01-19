@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="984a9e5e-638b-4691-bfff-0057f8e07190" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/utlc_analytics.wsgi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/user.py" afterDir="false" />
-    </list>
+    <list default="true" id="984a9e5e-638b-4691-bfff-0057f8e07190" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
