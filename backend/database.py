@@ -4,7 +4,7 @@ def get_db_connection():
     return mysql.connector.connect(
         host="localhost",
         user="root",
-        passwd="",
+        passwd="920214",
         database="utlc_datawarehouse"
     )
 
