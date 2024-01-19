@@ -45,11 +45,16 @@ class User:
         def login():
             data = request.json
             email = data.get('email')
-            username = data.get('username')
             password = data.get('password')
+            username = data.get('username')
 
             sql = "SELECT password FROM USERS WHERE email = %s OR username = %s"
             user_record = fetch_data(sql, (email, username))
+            print(user_record)
+
+            print(user_record[0].encode('utf-8'))
+            print(password.encode('utf-8'))
+            print(bcrypt.checkpw(password.encode('utf-8'), user_record[0].encode('utf-8')))
             if user_record and bcrypt.checkpw(password.encode('utf-8'), user_record[0].encode('utf-8')):
                 return jsonify({'message': "Login successful"}), 200
             else:
