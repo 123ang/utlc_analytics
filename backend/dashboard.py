@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-from database import fetch_data
+from database import fetch_data, fetch_all_data
 
 class Dashboard:
 
@@ -12,14 +12,16 @@ class Dashboard:
         def staff_count_by_school():
             # bar chart
             query = """
-                SELECT S.name_eng, COUNT(L.id) as count
+                SELECT S.short_name, COUNT(L.id) as count
                 FROM LECTURERS L
                 JOIN SCHOOLS S ON L.school_id = S.id
-                GROUP BY S.name_eng
+                GROUP BY S.short_name
             """
-            result = fetch_data(query)
-            count_by_school = {item['name_eng']: item['count'] for item in result}
+            result = fetch_all_data(query)
+
+            count_by_school = {item['short_name']: item['count'] for item in result}
             return jsonify(count_by_school)
+
 
         @self.app.route('/dashboard/staff_position_breakdown', methods=['GET'])
         def staff_position_breakdown():
@@ -29,7 +31,7 @@ class Dashboard:
                 FROM LECTURERS 
                 GROUP BY actual_position
             """
-            result = fetch_data(query)
+            result = fetch_all_data(query)
             position_breakdown = {item['actual_position']: item['count'] for item in result}
             return jsonify(position_breakdown)
 
@@ -41,8 +43,8 @@ class Dashboard:
                 FROM LECTURERS 
                 GROUP BY DATE(entering_uum_date)
             """
-            result = fetch_data(query)
-            timeline = {item['date']: item['count'] for item in result}
+            result = fetch_all_data(query)
+            timeline = {item['date'].strftime("%Y-%m-%d"): item['count'] for item in result}
             return jsonify(timeline)
 
         @self.app.route('/dashboard/staff_join_per_year', methods=['GET'])
@@ -53,7 +55,7 @@ class Dashboard:
                 FROM LECTURERS 
                 GROUP BY YEAR(entering_uum_date)
             """
-            result = fetch_data(query)
+            result = fetch_all_data(query)
             join_per_year = {item['year']: item['count'] for item in result}
             return jsonify(join_per_year)
 
@@ -67,7 +69,7 @@ class Dashboard:
                         JOIN SCHOOLS S ON T.school_id = S.id
                         GROUP BY S.name_eng
                     """
-            result = fetch_data(query)
+            result = fetch_all_data(query)
             training_count_by_school = {item['name_eng']: item['count'] for item in result}
             return jsonify(training_count_by_school)
 
@@ -80,7 +82,7 @@ class Dashboard:
                         JOIN TRAININGS T ON TL.training_id = T.id
                         GROUP BY T.name_english
                     """
-            result = fetch_data(query)
+            result = fetch_all_data(query)
             lecturer_attendance = {item['name_english']: item['count'] for item in result}
             return jsonify(lecturer_attendance)
 
@@ -93,6 +95,6 @@ class Dashboard:
                         GROUP BY DATE(start_date)
                         ORDER BY DATE(start_date)
                     """
-            result = fetch_data(query)
-            trainings_over_time = {item['date']: item['count'] for item in result}
+            result = fetch_all_data(query)
+            trainings_over_time = {item['date'].strftime("%Y-%m-%d"): item['count'] for item in result}
             return jsonify(trainings_over_time)
