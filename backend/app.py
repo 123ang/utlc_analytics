@@ -7,7 +7,7 @@ from dashboard import Dashboard
 app = Flask(__name__)
 
 
-@app.route('/api')
+@app.route('/api/hello')
 def index():
     return "Hello, UTLC Analytics!"
 
