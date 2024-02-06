@@ -1,0 +1,17 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+$theme-grey: #d4d4d4;
+$theme-white: #e1e1e1;
+$theme-black: #151515;
+$theme-darkgrey: #343434;
+$theme-brown: #acaca0;
+$theme-red: #d63124;
+
+$transition-transform: transform .3s cubic-bezier(.9, 0, .1, 1);
+$transition-background: background .3s cubic-bezier(.9, 0, .1, 1);
+$transition-opacity: opacity .3s cubic-bezier(.9, 0, .1, 1);
+$transition-color: color .3s cubic-bezier(.9, 0, .1, 1);
+
+$border-default: 8px;

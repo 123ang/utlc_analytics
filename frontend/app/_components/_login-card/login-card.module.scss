@@ -1,0 +1,179 @@
+@import "../../variables.scss";
+
+.BodyBackground{
+    @apply
+    absolute
+    w-full
+    h-full
+    top-0
+    left-0
+    bg-theme-darkgrey;
+}
+
+.TopLogo{
+    transform: translate(0 , -12rem);
+
+    @apply
+    fixed
+    h-fit
+    w-fit
+    lg:text-[28rem]
+    text-[8rem]
+    lg:top-[0]
+    top-[9rem]
+    lg:left-[-3rem]
+    left-[-1.5rem]
+    font-black
+    text-theme-white
+    opacity-[.1]
+    pointer-events-none
+    select-none;
+}
+
+.BottomLogo{
+    transform: translate(0 , 10rem);
+
+    @apply
+    fixed
+    h-fit
+    w-fit
+    lg:text-[20rem]
+    text-[3.75rem]
+    lg:bottom-[0]
+    bottom-[8rem]
+    lg:right-[-10rem]
+    right-[-1.5rem]
+    font-black
+    text-theme-white
+    opacity-[.1]
+    pointer-events-none
+    select-none;
+}   
+
+.LoginCard{
+    @apply
+    overflow-hidden
+    relative
+    bg-theme-white
+    rounded-default
+    shadow-theme-1
+    lg:p-10
+    min-h-[600px]
+    max-w-[600px]
+    w-full
+    flex
+    flex-col
+    items-center
+    justify-center
+    p-4;        
+
+    .FormBody{
+        @apply       
+        grid
+        gap-20 
+        w-full;
+
+        .InputContainer{
+            @apply
+            relative
+            w-full
+            max-w-[450px]
+            mx-auto
+            h-fit;
+
+            .FormInput{
+                background-color: rgb(0 0 0 / 0);                
+
+                @apply
+                relative
+                border-b-2
+                border-b-theme-brown
+                w-full;
+
+                &:valid + .PlaceholderText,
+                &:focus-within + .PlaceholderText,
+                &:focus-visible + .PlaceholderText,
+                &:focus + .PlaceholderText{
+                    transform: translateY(-100%);
+                }
+            }
+
+            .PlaceholderText{
+                transition: $transition-transform;
+
+                @apply
+                select-none
+                pointer-events-none
+                bottom-0
+                left-0
+                absolute
+                text-theme-brown
+                py-2
+                px-4;
+            }
+
+            .SubmitButton{
+                transition: $transition-background;
+                
+                @apply
+                w-full
+                p-4
+                cursor-pointer
+                rounded-default
+                bg-theme-brown
+                text-theme-white;
+
+                &:hover{
+                    @apply
+                    bg-theme-darkgrey;
+                }
+
+                &:active{
+                    @apply
+                    bg-theme-black;
+                }
+            }
+            .FailMessage{
+                @apply
+                absolute
+                w-full
+                flex
+                justify-center
+                items-center
+                text-sm
+                bottom-[-2rem]
+                text-theme-red;
+            }
+        }
+
+    }
+
+    .ResetPw{
+        @apply
+        flex
+        absolute
+        items-center
+        justify-center
+        cursor-pointer
+        select-none
+        bottom-4       
+        py-2
+        px-4 
+        text-sm;
+
+        &::after{
+            content: '';
+            width: 100%;
+            position: absolute;
+            bottom: .15rem;
+            border-bottom: 1px solid $theme-darkgrey;
+            transform-origin: center;
+            transform: scaleX(0);
+            transition: $transition-transform;
+        }
+
+        &:hover::after{
+            transform: none;
+        }
+    }
+}

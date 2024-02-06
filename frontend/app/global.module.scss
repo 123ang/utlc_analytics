@@ -1,0 +1,32 @@
+@import '@/app/variables.scss';
+
+.BodyContainer{
+    @apply
+    relative
+    h-full
+    p-4;
+
+    .TitleContainer{
+        @apply
+        relative
+        h-[4.5rem];
+
+        .TitleText{
+            @apply
+            relative
+            top-[-1rem]
+            left-0
+            font-bold
+            text-theme-brown
+            text-[4rem];
+        }
+    }    
+}
+
+.CardContainer{
+    @apply 
+    relative
+    rounded-default
+    shadow-card
+    bg-theme-white;    
+}

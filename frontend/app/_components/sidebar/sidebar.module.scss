@@ -1,0 +1,67 @@
+.BodyContainer{
+    @apply
+    relative
+    p-4
+    w-full
+    lg:max-w-[16rem];
+
+    .NavCard{
+        @apply
+        h-full
+        py-4
+        rounded-default
+        shadow-theme-2
+        bg-theme-darkgrey;
+
+        .LogoContainer{
+            @apply
+            lg:h-[10rem]
+            h-[6rem]
+            flex
+            items-center
+            justify-center
+            text-[2rem]
+            text-theme-brown
+            font-bold;
+        }
+
+        .NavLinkContainer{
+            @apply
+            grid
+            gap-3
+            pt-8
+            px-4;
+
+            .NavLink{
+                @apply
+                relative
+                flex
+                items-center
+                gap-1
+                px-6
+                py-3
+                cursor-pointer
+                select-none
+                rounded-default
+                font-bold
+                overflow-hidden
+                text-theme-brown;
+
+                .HoverNav{
+                    @apply
+                    absolute
+                    z-10
+                    h-full
+                    top-0
+                    left-0
+                    origin-left
+                    w-0
+                    opacity-0
+                    select-none
+                    pointer-events-none
+                    bg-theme-brown;
+                }
+            }
+        }
+    }
+}

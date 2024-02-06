@@ -1,0 +1,59 @@
+@import '@/app/variables.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main{
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+
+    @apply
+    max-w-[100vw]
+    min-h-[100vh]
+    overflow-x-hidden
+    bg-theme-grey;
+
+}
+
+input{
+    &:focus-within,
+    &:focus-visible,
+    &:focus{
+        outline: 0;
+    }
+    
+    @apply
+    px-4
+    py-2;
+} 
+
+button{
+    outline: 0;
+}
+
+.disabled{
+    opacity: .35;
+    pointer-events: none;
+    cursor: not-allowed;
+    user-select: none;
+}
+
+.main-container{
+    display: flex;
+    column-gap: .25rem;
+}
+
+.nav-active{
+    background-color: $theme-brown;
+    border-radius: $border-default;
+    
+    *{
+        color: $theme-darkgrey;
+    }
+}
+
+.pagination-active{
+    background-color: $theme-darkgrey !important;
+    color: $theme-white !important;
+}
