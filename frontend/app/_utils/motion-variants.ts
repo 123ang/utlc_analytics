@@ -172,3 +172,71 @@ export const TableColumnVariant = {
     }
 }
 
+export const ModalBackground = {
+    start: {
+        opacity: 0,
+    },
+    end: {
+        opacity: 1,
+        transition:{
+            duration: .5,
+            ease: [.9, 0, .1, 1],
+            delayChildren: .1,
+            staggerChildren: .5,
+        },
+    },
+    exit: {
+        opacity: 0,
+        transition:{
+            duration: .5,
+            ease: [.9, 0, .1, 1],
+        },
+    },
+}
+
+export const PaginationFadeUp = {
+    start: {
+        opacity: 0,
+        y: '5rem'
+    },
+    end: {
+        opacity: 1,
+        y: 0,
+        transition:{
+            delay: 1,
+            duration: .5,
+            ease: [.9, 0, .1, 1],
+        },
+    },
+    exit: {
+        opacity: 0,
+        y: '5rem',
+        transition:{
+            duration: .5,
+            ease: [.9, 0, .1, 1],
+        },
+    },
+}
+
+export const ModalCard = {
+    start: {
+        opacity: 0,
+        y: '5rem'
+    },
+    end: {
+        opacity: 1,
+        y: 0,
+        transition:{
+            duration: .5,
+            ease: [.9, 0, .1, 1],
+        },
+    },
+    exit: {
+        opacity: 0,
+        y: '5rem',
+        transition:{
+            duration: .5,
+            ease: [.9, 0, .1, 1],
+        },
+    },
+}

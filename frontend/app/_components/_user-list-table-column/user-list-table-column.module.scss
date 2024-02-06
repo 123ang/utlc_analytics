@@ -13,6 +13,8 @@
 
     .TableItem{
         @apply
+        flex
+        items-center
         text-balance
         overflow-x-hidden
         px-4
@@ -20,10 +22,18 @@
 
         &.TableAction{
             @apply
-            float-end
-            cursor-pointer
-            select-none
-            max-w-[100px];
+            flex
+            gap-2
+            items-center;
+
+            .ActionItem{
+                @apply
+                flex
+                items-center
+                cursor-pointer
+                select-none
+                px-2;
+            }
         }
     }
 }

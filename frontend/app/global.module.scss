@@ -30,3 +30,42 @@
     shadow-card
     bg-theme-white;    
 }
+
+.ModalContainer{
+    background-color: rgb(21 21 21 / .5);
+
+    @apply
+    fixed
+    flex
+    justify-center
+    items-center
+    py-10
+    overflow-y-auto
+    top-0
+    left-0
+    w-full
+    h-full    
+    max-h-[100vh]
+    z-[9999];
+
+    &::after{
+        font-family: $material-icon-font;
+        content: '\e5cd';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: .5rem 1rem;
+        color: $theme-white;
+        font-size: 2rem;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .CardContainer{
+        @apply
+        p-12
+        w-3/4
+        max-w-[1440px]
+        bg-theme-white;
+    }
+}

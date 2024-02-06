@@ -22,7 +22,7 @@ const UserList = () => {
                         <div className={`${styles.TableItem} `}>Name</div>
                         <div className={`${styles.TableItem} `}>Email</div>
                         <div className={`${styles.TableItem} `}>Username</div>
-                        <div className={`${styles.TableItem}  ${styles.TableAction}`}></div>
+                        <div className={`${styles.TableItem}  ${styles.TableAction}`}>Action</div>
                     </div>
                 </div>   
             </div>
