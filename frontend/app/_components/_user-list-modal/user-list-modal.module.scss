@@ -1,0 +1,101 @@
+@import '@/app/variables.scss';
+
+.BodyContainer{
+    @apply
+    grid
+    lg:grid-cols-2
+    text-theme-darkgrey;
+    
+    .TitleContainer{        
+        h6{
+            @apply
+            tracking-[.25rem]
+            text-[1rem];
+        }
+        h4{
+            transform: translateY(-.75rem);
+
+            @apply
+            font-bold
+            text-[2rem];
+        }        
+    }
+
+    .DetailContainer{
+        @apply
+        grid
+        gap-8
+        lg:mt-4;
+
+        .DetailItem{
+            .DetailTitle{
+                @apply
+                tracking-[.25rem];
+            }
+            .DetailText{
+                @apply
+                text-[1.5rem];
+            }
+        }
+    }
+
+    .ActionContainer{}
+}
+
+.CardBodyContainer{
+    @apply
+    text-center;
+
+    .TitleContainer{
+        @apply
+        text-[2rem]
+        font-bold;
+    }
+    .DescriptionContainer{
+        @apply
+        tracking-[.25rem];
+    }
+
+    .ButtonContainer{
+        @apply
+        flex
+        gap-4
+        md:gap-8
+        lg:gap-12
+        justify-center
+        mt-8;
+
+        button{
+            transition: $transition-background;
+
+            @apply
+            w-fit
+            rounded-default
+            select-none
+            px-6
+            py-3;
+
+            &.CancelButton{
+                @apply
+                text-theme-white
+                bg-red-500;
+
+                &:hover{
+                    @apply
+                    bg-red-900;
+                }
+            }
+
+            &.ConfirmButton{
+                @apply
+                text-theme-white
+                bg-emerald-500;
+
+                &:hover{
+                    @apply
+                    bg-emerald-900;
+                }
+            }
+        }
+    }
+}

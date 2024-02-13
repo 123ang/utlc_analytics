@@ -1,0 +1,9 @@
+@import "../../variables.scss";
+
+.CardContainer{
+    @apply 
+    relative
+    rounded-default
+    shadow-card
+    bg-theme-white;    
+}

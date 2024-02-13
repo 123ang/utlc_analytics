@@ -1,0 +1,55 @@
+@import "@/app/variables.scss";
+
+.BodyContainer{
+    @apply
+    p-4;
+
+    .TitleContainer{
+        @apply
+        relative
+        h-[4.5rem];
+
+        .TitleText{
+            @apply
+            relative
+            top-[-1rem]
+            left-0
+            font-bold
+            text-theme-brown
+            text-[4rem];
+        }
+    }    
+}
+
+.TableContainer{
+    @apply
+    w-full
+    max-w-[1440px]
+    grid
+    mb-2
+    gap-2;
+    
+    .TableHeader{
+        @apply
+        grid
+        grid-cols-4
+        rounded-default
+        px-4
+        py-2
+        bg-theme-darkgrey
+        text-theme-brown
+        font-bold
+        gap-3;
+
+        .TableItem{
+            @apply
+            px-4
+            max-w-full;
+
+            &.TableAction{
+                @apply
+                float-end;
+            }
+        }
+    }
+}

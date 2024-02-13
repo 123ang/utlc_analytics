@@ -1,0 +1,40 @@
+@import '@/app/variables.scss';
+
+.PaginationContainer{
+    @apply
+    absolute
+    w-full
+    h-fit
+    left-0
+    bottom-[1rem]
+    flex
+    mt-12
+    items-center
+    justify-center
+    gap-2
+    max-w-[1440px];    
+
+    .PaginationButton{
+        transition: $transition-background, $transition-color;
+
+        @apply
+        w-10
+        h-10
+        rounded-default
+        bg-theme-white
+        text-theme-darkgrey
+        overflow-hidden
+        flex
+        justify-center
+        items-center
+        select-none
+        cursor-pointer
+        shadow-card;
+
+        &:hover{
+            @apply
+            text-theme-white
+            bg-theme-brown;
+        }
+    }
+}

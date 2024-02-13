@@ -1,0 +1,39 @@
+@import "../../variables.scss";
+
+.TableColumn {
+    @apply
+    grid
+    grid-cols-4
+    rounded-default
+    px-4
+    py-4
+    bg-theme-white
+    text-theme-darkgrey
+    gap-3;
+
+    .TableItem{
+        @apply
+        flex
+        items-center
+        text-balance
+        overflow-x-hidden
+        px-4
+        max-w-full;
+
+        &.TableAction{
+            @apply
+            flex
+            gap-2
+            items-center;
+
+            .ActionItem{
+                @apply
+                flex
+                items-center
+                cursor-pointer
+                select-none
+                px-2;
+            }
+        }
+    }
+}

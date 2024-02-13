@@ -1,0 +1,41 @@
+@import '@/app/variables.scss';
+
+.NotFoundContainer{
+    @apply
+    flex
+    h-full
+    flex-col
+    items-center
+    text-center
+    text-theme-darkgrey
+    justify-center;
+
+    .TitleText{
+        @apply
+        font-bold
+        text-[16rem];
+    }
+    .DescriptionText{
+        @apply
+        mt-[-5rem]
+        text-center
+        pl-6
+        tracking-[1.5rem];
+    }
+    .ButtonLink{
+        transition: $transition-background;
+
+        @apply
+        bg-theme-brown
+        text-theme-white
+        px-8
+        py-4
+        rounded-default
+        my-12;
+
+        &:hover{
+            @apply
+            bg-theme-darkgrey;
+        }
+    }
+}
