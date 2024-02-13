@@ -6,7 +6,7 @@ import UserListTableColumn from '../_user-list-table-column/user-list-table-colu
 
 const getUserList = async () => {
     try {
-        await new Promise(resolve => setTimeout(resolve, 1000))
+        // await new Promise(resolve => setTimeout(resolve, 1000))
         const response = await fetch('http://localhost:3000/api/user-list');
         const data = await response.json();
         return data;

@@ -21,9 +21,10 @@ interface Props<T> {
 
 const UserListTableColumn: React.FC<Props<UserListDataInterface>> = ({data}) => {    
     
+    // set Item per page here
+    const [itemsPerPage, setItemsPerPage] = useState(10);
     const [dataArray, setDataArray] = useState<UserListDataInterface[]>([]);    
     const [currentPage, setCurrentPage] = useState<number>(1);
-    const [itemsPerPage, setItemsPerPage] = useState(2);
     const [userModal, setUserModal] = useState<null | string>(null);
     const [userData, setUserData] = useState<null | UserListDataInterface>(null);
 
