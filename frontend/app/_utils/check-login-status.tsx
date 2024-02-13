@@ -5,12 +5,16 @@ import { loginStatus } from "@/app/_data/loginStatus";
 export const checkLoginStatus = () => {
   let isLogin = loginStatus;
 
+  // console.log(isLogin);
+  
   if(isLogin) return;
   redirect('/login')
 }
 
 export const goToDashboard = () => {
   let isLogin = loginStatus;
+
+  // console.log(isLogin);
 
   if(!isLogin) return;
   redirect('/')

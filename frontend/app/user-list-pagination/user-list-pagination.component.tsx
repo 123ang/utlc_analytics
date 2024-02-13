@@ -30,6 +30,7 @@ const UserListPagination: React.FC<Props<any>> = ({props}) => {
     }
 
     const updateRenderPage = () => {
+        if( pageNumbersArray.length < 3 ) return setRenderPageNumber(pageNumbersArray);
         if (currentPage-1 <= 0) {
             setRenderPageNumber(pageNumbersArray.slice(0, 3));
         }
@@ -42,7 +43,7 @@ const UserListPagination: React.FC<Props<any>> = ({props}) => {
     }
 
     useEffect(()=>{
-        updateRenderPage()
+        updateRenderPage();
     }, [currentPage])
 
     return (

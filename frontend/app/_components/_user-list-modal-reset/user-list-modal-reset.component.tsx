@@ -16,7 +16,7 @@ const UserListModalReset = ({props}: any) => {
         <div className={styles.CardBodyContainer}>
             <div className={styles.TitleContainer}>Reset Password</div>
             <div className={styles.DescriptionContainer}>
-                Do you want to reset {userData.name}'s password ?
+                Do you want to reset {userData.name} password ?
             </div>
             <div className={styles.ButtonContainer}>
                 <button className={styles.CancelButton} onClick={handleCancel}>Cancel</button>

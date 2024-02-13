@@ -10,11 +10,11 @@ const Template = ({children} : {children: React.ReactNode}) => {
     const pathname = usePathname();        
 
     // check is the user login, if not then redirect to login 
-    // if (pathname !== '/login') {
-    //     checkLoginStatus();      
-    // } else {
-    //     goToDashboard();
-    // }
+    if (pathname !== '/login') {
+        checkLoginStatus();      
+    } else {
+        goToDashboard();
+    }
 
     return (
         <>
