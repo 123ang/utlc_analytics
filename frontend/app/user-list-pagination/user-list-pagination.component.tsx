@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import styles from './user-list-pagination.module.scss'
 
 interface Props<T> {
@@ -10,6 +11,7 @@ const UserListPagination: React.FC<Props<any>> = ({props}) => {
 
     const pageNumbers = Math.ceil(data.length / itemsPerPage);   
     const pageNumbersArray = Array.from({ length: pageNumbers }, (_, index) => index + 1);        
+    const [renderPageNumber, setRenderPageNumber] = useState<any>([]);
 
     const handlePage = (index : number) => {
         setCurrentPage(index);
@@ -27,6 +29,22 @@ const UserListPagination: React.FC<Props<any>> = ({props}) => {
         setCurrentPage(currentPage + index);
     }
 
+    const updateRenderPage = () => {
+        if (currentPage-1 <= 0) {
+            setRenderPageNumber(pageNumbersArray.slice(0, 3));
+        }
+        else if (currentPage >= pageNumbersArray.length) {
+            setRenderPageNumber(pageNumbersArray.slice(pageNumbersArray.length - 3, pageNumbersArray.length));
+        } 
+        else {
+            setRenderPageNumber(pageNumbersArray.slice(currentPage-2, currentPage+1))
+        }
+    }
+
+    useEffect(()=>{
+        updateRenderPage()
+    }, [currentPage])
+
     return (
         <div className={styles.PaginationContainer}>
             <div className={`${styles.PaginationButton} ${currentPage === 1 && 'disabled'}`} onClick={handleMostPrev}>
@@ -42,6 +60,7 @@ const UserListPagination: React.FC<Props<any>> = ({props}) => {
                 pageNumbersArray.map((page, index) => (
                     <div
                         className={`
+                            ${renderPageNumber.includes(page) ? '' : 'pagination-hide'}                            
                             ${styles.PaginationButton} 
                             ${currentPage === index+1 ? 'pagination-active' : ''}
                         `} 
